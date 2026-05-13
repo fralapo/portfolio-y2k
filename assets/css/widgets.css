@@ -67,3 +67,18 @@
   border: 0; color: #fff; padding: var(--sp-2); border-radius: var(--r-sm);
   font-weight: 600;
 }
+
+.sticky-notes { position: absolute; inset: 0; pointer-events: none; z-index: var(--z-sticky); }
+.sticky {
+  position: absolute;
+  pointer-events: auto;
+  width: 200px; padding: var(--sp-3);
+  background: linear-gradient(180deg, #fff599, #f5e93d);
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  font-family: 'Caveat', 'Comic Sans MS', cursive;
+  font-size: var(--fs-md);
+  color: #3a2e00;
+  cursor: grab; touch-action: none;
+  transform-origin: top left;
+}
+.sticky:active { cursor: grabbing; }
