@@ -74,5 +74,13 @@
   "cv.section.languages": "Languages",
   "cv.exp.futuroma": "Wireframes, interface design, user flows for web projects. Adobe CC + Figma.",
   "cv.edu.naba": "Branding, digital campaigns, web. Focus on UX/UI, art direction, motion. 4 team projects in portfolio.",
-  "page.readme.body": "  +------------------------------------------+\n  |  welcome to jacopo's desktop             |\n  +------------------------------------------+\n\n  this is a portfolio shaped like an archived pc.\n  click any icon to open it.\n  drag icons to rearrange the desktop.\n\n  what's here:\n    - 9 projects (click to read)\n    - about / skills / contact\n    - cv.pdf (career summary)\n    - yellow sticky notes\n\n  shortcuts:\n    - esc          close active window\n    - tab          navigate inside window\n    - flag         switch language from tray\n    - speaker      toggle ambient audio\n\n  stack: vanilla html + css + js, no build.\n  source: github.com/fralapo/portfolio-y2k\n\n  enjoy.\n  - j."
+  "page.readme.body": "  +------------------------------------------+\n  |  welcome to jacopo's desktop             |\n  +------------------------------------------+\n\n  this is a portfolio shaped like an archived pc.\n  click any icon to open it.\n  drag icons to rearrange the desktop.\n\n  what's here:\n    - 9 projects (click to read)\n    - about / skills / contact\n    - cv.pdf (career summary)\n    - yellow sticky notes\n\n  shortcuts:\n    - esc          close active window\n    - tab          navigate inside window\n    - flag         switch language from tray\n    - speaker      toggle ambient audio\n\n  stack: vanilla html + css + js, no build.\n  source: github.com/fralapo/portfolio-y2k\n\n  enjoy.\n  - j.",
+  "hero.greeting": "Hello, I'm Jacopo!",
+  "hero.role": "Graphic Designer",
+  "hero.stat.years": "Years in design",
+  "hero.stat.projects": "Projects",
+  "hero.cta": "Write Me",
+  "about.socials.label": "Find me online",
+  "skill.tab.lang": "Languages",
+  "skill.tab.edu": "Education"
 }

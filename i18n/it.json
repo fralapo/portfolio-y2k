@@ -74,5 +74,13 @@
   "cv.section.tools": "Strumenti",
   "cv.section.languages": "Lingue",
   "cv.exp.futuroma": "Wireframes, interface design, user flows per progetti web. Adobe CC + Figma.",
-  "cv.edu.naba": "Branding, campagne digitali, web. Focus UX/UI, art direction, motion. 4 progetti di squadra in portfolio."
+  "cv.edu.naba": "Branding, campagne digitali, web. Focus UX/UI, art direction, motion. 4 progetti di squadra in portfolio.",
+  "hero.greeting": "Ciao, sono Jacopo!",
+  "hero.role": "Graphic Designer",
+  "hero.stat.years": "Anni di design",
+  "hero.stat.projects": "Progetti",
+  "hero.cta": "✉ Scrivimi",
+  "about.socials.label": "Trovami online",
+  "skill.tab.lang": "Lingue",
+  "skill.tab.edu": "Formazione"
 }
