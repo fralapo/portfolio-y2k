@@ -1,4 +1,5 @@
 import { openWindow } from './window-manager.js';
+import { play as playSfx } from './sfx.js';
 
 const ORB = document.querySelector('.start-orb');
 const MENU = document.querySelector('.start-menu');
@@ -30,7 +31,8 @@ export function initStartMenu() {
     b.addEventListener('click', () => { openWindow(b.dataset.window); close(); });
   });
   MENU.querySelector('[data-action="shutdown"]').addEventListener('click', () => {
-    location.href = '404.html?reason=shutdown';
+    playSfx('win7-logoff-sound', 0.5);
+    setTimeout(() => { location.href = '404.html?reason=shutdown'; }, 1400);
   });
   // Search filter icone desktop
   const search = MENU.querySelector('.sm-search input');

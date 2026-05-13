@@ -33,6 +33,13 @@
   </main>
   <script>
     document.getElementById('path').textContent = location.pathname + location.search;
+    // Play Win7 critical-stop sound (browsers block autoplay until first interaction;
+    // fail silently if blocked).
+    try {
+      const a = new Audio('assets/audio/win7-critical-stop.wav');
+      a.volume = 0.5;
+      a.play().catch(() => {});
+    } catch {}
   </script>
 </body>
 </html>

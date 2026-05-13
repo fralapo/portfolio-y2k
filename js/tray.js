@@ -1,4 +1,5 @@
 import { setLang } from './i18n.js';
+import { play as playSfx } from './sfx.js';
 
 const AUDIO_BTN = document.querySelector('.tray-audio');
 const LANG_BTN  = document.querySelector('.tray-lang');
@@ -32,6 +33,7 @@ export function initTray() {
     await setLang(next);
     LANG_BTN.textContent = next === 'it' ? '🇮🇹' : '🇬🇧';
     LANG_BTN.dataset.currentLang = next;
+    playSfx('win7-notify', 0.3);
   });
 
   // Init flag based on current lang

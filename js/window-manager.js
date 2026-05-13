@@ -1,6 +1,8 @@
 // Window manager: open, focus, drag, min/max/close.
 // Single source of truth: AppState.openWindows Map<id, instance>.
 
+import { play as playSfx } from './sfx.js';
+
 const TEMPLATE = document.getElementById('window-template');
 const LAYER    = document.querySelector('.windows-layer');
 
@@ -112,17 +114,20 @@ function wireControls(el, id) {
 export function focusWindow(id) {
   const inst = window.AppState.openWindows.get(id);
   if (!inst) return;
+  const wasMinimized = inst.el.classList.contains('is-minimized');
   document.querySelectorAll('.window.is-focused').forEach(w => w.classList.remove('is-focused'));
   inst.el.classList.add('is-focused');
   inst.el.classList.remove('is-minimized');
   inst.el.style.zIndex = nextZ();
   window.AppState.focusedWindowId = id;
   inst.el.focus();
+  if (wasMinimized) playSfx('win7-restore', 0.35);
 }
 
 export function closeWindow(id) {
   const inst = window.AppState.openWindows.get(id);
   if (!inst) return;
+  playSfx('win7-recycle', 0.35);
   inst.el.remove();
   window.AppState.openWindows.delete(id);
   document.dispatchEvent(new CustomEvent('windows:changed'));
@@ -132,6 +137,7 @@ export function minimizeWindow(id) {
   const inst = window.AppState.openWindows.get(id);
   if (!inst) return;
   inst.el.classList.add('is-minimized');
+  playSfx('win7-minimize', 0.35);
   document.dispatchEvent(new CustomEvent('windows:changed'));
 }
 
