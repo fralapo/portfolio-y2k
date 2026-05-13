@@ -1,6 +1,7 @@
 // Bootstrap.
 import { openWindow, makeDraggable } from './window-manager.js';
 import { initTaskbar } from './taskbar.js';
+import { initTray } from './tray.js';
 import { loadDictionary, applyI18n, setLang } from './i18n.js';
 
 window.AppState = {
@@ -40,6 +41,7 @@ window.addEventListener('keydown', e => {
   }
 });
 
+initTray();
 initTaskbar();
 
 console.info('Portfolio Y2K — ready');
