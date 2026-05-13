@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>:( PORTFOLIO_NOT_FOUND</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body { margin:0; padding:0; height:100%; background:#0078d7; color:#fff; font-family: 'Segoe UI', sans-serif; }
+    .bsod { max-width: 800px; padding: 8vh 8vw; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.5; }
+    .face { font-size: 8em; margin: 0 0 0.2em; font-weight: 200; }
+    h1 { font-size: 1.6em; font-weight: 400; margin: 0 0 1em; }
+    code { background: rgba(255,255,255,.12); padding: 2px 6px; border-radius: 3px; }
+    a.back {
+      display: inline-block; margin-top: 2em;
+      background: #fff; color: #0078d7;
+      padding: .6em 1.2em; border-radius: 4px;
+      text-decoration: none; font-weight: 600;
+    }
+    a.back:hover { background: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <main class="bsod">
+    <div class="face">:(</div>
+    <h1>Your portfolio ran into a problem and needs to restart.<br>
+        We're just collecting some error info, and then we'll restart for you.</h1>
+    <p>100% complete</p>
+    <p>For more information about this issue:<br>
+       Stop code: <code>PORTFOLIO_NOT_FOUND</code><br>
+       What failed: <code id="path"></code>
+    </p>
+    <a href="/" class="back">← Back to desktop</a>
+  </main>
+  <script>
+    document.getElementById('path').textContent = location.pathname + location.search;
+  </script>
+</body>
+</html>
