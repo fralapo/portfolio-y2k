@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it" data-i18n-lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">jacopo latrofa — graphic designer</title>
+  <meta name="description" data-i18n="meta.description" content="portfolio anni 2000 di jacopo latrofa, grafico, ui designer.">
+  <link rel="icon" href="/assets/img/orbs/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/desktop.css">
+  <link rel="stylesheet" href="/assets/css/windows.css">
+  <link rel="stylesheet" href="/assets/css/widgets.css">
+  <link rel="stylesheet" href="/assets/css/cursors.css">
+  <link rel="stylesheet" href="/assets/css/mobile.css">
+</head>
+<body>
+  <a class="sr-only" href="#main">Salta al desktop</a>
+
+  <main id="main" role="application" aria-label="Desktop portfolio">
+
+    <!-- Wallpaper layer -->
+    <div class="wallpaper" aria-hidden="true"></div>
+
+    <!-- Desktop icons -->
+    <ul class="icons-grid" role="list">
+      <li><button class="icon" data-window="simpsons-8bit"><img src="/assets/img/icons/simpsons.png" alt=""><span class="icon-label" data-i18n="icon.simpsons">Simpsons 8-Bit</span></button></li>
+      <li><button class="icon" data-window="bart-tiny-room"><img src="/assets/img/icons/bart.png" alt=""><span class="icon-label" data-i18n="icon.bart">Bart's Room</span></button></li>
+      <li><button class="icon" data-window="e-mobility"><img src="/assets/img/icons/emobility.png" alt=""><span class="icon-label" data-i18n="icon.emobility">E-Mobility</span></button></li>
+      <li><button class="icon" data-window="museum-boston"><img src="/assets/img/icons/museum.png" alt=""><span class="icon-label" data-i18n="icon.museum">Museum Boston</span></button></li>
+      <li><button class="icon" data-window="tnf-bnkr44"><img src="/assets/img/icons/tnf.png" alt=""><span class="icon-label" data-i18n="icon.tnf">TNF × Bnkr44</span></button></li>
+      <li><button class="icon" data-window="fiuto"><img src="/assets/img/icons/fiuto.png" alt=""><span class="icon-label" data-i18n="icon.fiuto">Fiuto</span></button></li>
+      <li><button class="icon" data-window="lo-sguardo"><img src="/assets/img/icons/sguardo.png" alt=""><span class="icon-label" data-i18n="icon.sguardo">Lo Sguardo</span></button></li>
+      <li><button class="icon" data-window="camillo"><img src="/assets/img/icons/camillo.png" alt=""><span class="icon-label" data-i18n="icon.camillo">Camillo</span></button></li>
+      <li><button class="icon" data-window="christopher-ward"><img src="/assets/img/icons/cw.png" alt=""><span class="icon-label" data-i18n="icon.cw">Christopher Ward</span></button></li>
+    </ul>
+
+    <!-- Sticky notes -->
+    <div class="sticky-notes" aria-label="Notes"></div>
+
+    <!-- Windows mount point -->
+    <div class="windows-layer" aria-live="polite"></div>
+
+    <!-- Start menu -->
+    <nav class="start-menu" hidden aria-label="Start menu"></nav>
+
+    <!-- Taskbar -->
+    <footer class="taskbar" role="contentinfo">
+      <button class="start-orb" aria-label="Start" aria-expanded="false">
+        <img src="/assets/img/orbs/start-orb.png" alt="" width="32" height="32">
+      </button>
+      <ul class="task-buttons" role="list"></ul>
+      <div class="tray">
+        <button class="tray-audio" aria-pressed="false" data-i18n-aria="tray.audio.off" aria-label="Audio muto">🔇</button>
+        <button class="tray-lang" aria-label="Lingua" data-current-lang="it">🇮🇹</button>
+        <span class="tray-wifi" aria-hidden="true">📶</span>
+      </div>
+      <time class="clock" datetime=""></time>
+    </footer>
+
+  </main>
+
+  <!-- Window template -->
+  <template id="window-template">
+    <article class="window" role="dialog" tabindex="-1">
+      <header class="window-titlebar">
+        <img class="window-icon" src="" alt="" width="16" height="16">
+        <h2 class="window-title"></h2>
+        <div class="window-controls">
+          <button class="win-min" aria-label="Riduci">_</button>
+          <button class="win-max" aria-label="Ingrandisci">▢</button>
+          <button class="win-close" aria-label="Chiudi">×</button>
+        </div>
+      </header>
+      <div class="window-body"></div>
+      <footer class="window-statusbar"><span class="status-text">Ready</span></footer>
+    </article>
+  </template>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
