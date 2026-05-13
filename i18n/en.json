@@ -45,5 +45,15 @@
   "win.camillo.title": "Camillo — Social Strategy",
   "win.camillo.desc": "Comprehensive social media + instant advertising strategy for Camillo. Editorial plan, real-time trend reactions, community building.",
   "win.cw.title": "Christopher Ward — D&AD 2025",
-  "win.cw.desc": "Brand repositioning concept for Christopher Ward targeting Gen Z. \"Precise things for unpredictable people\". Cinematic museum-heist narrative."
+  "win.cw.desc": "Brand repositioning concept for Christopher Ward targeting Gen Z. \"Precise things for unpredictable people\". Cinematic museum-heist narrative.",
+  "page.about.title": "About — Properties",
+  "page.about.intro": "Jacopo Latrofa, graphic designer, 6+ years experience.",
+  "page.about.body": "Graphic Design at NABA (Milan, 2022–2025). UI/UX intern @ Studio Futuroma (Rome) since 2025.",
+  "page.skills.title": "Skills — Properties",
+  "page.contact.title": "Contact — Properties",
+  "page.contact.body": "Drop me a line for projects, collaborations, or coffee in Rome.",
+  "skill.tab.tools": "Tools",
+  "skill.tab.code": "Code",
+  "skill.tab.hard": "Hard",
+  "skill.tab.soft": "Soft"
 }

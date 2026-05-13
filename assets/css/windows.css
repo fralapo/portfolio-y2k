@@ -66,3 +66,14 @@
 .window-toolbar button.is-active { border-bottom-color: var(--aero-sky-bottom); color: var(--aero-sky-bottom); }
 [data-tab-panel] { display: none; }
 [data-tab-panel].is-active { display: block; }
+
+/* Project content layout */
+.kv { list-style: none; padding: 0; margin: 0; }
+.kv li { padding: var(--sp-1) 0; }
+.kv li strong { display: inline-block; min-width: 100px; }
+
+.skill-list { list-style: none; padding: 0; margin: 0; }
+.skill-list li { padding: var(--sp-1) 0; display: flex; justify-content: space-between; gap: var(--sp-2); border-bottom: 1px dotted rgba(0,0,0,.1); }
+.skill-list li .lvl { font-size: var(--fs-xs); color: #777; text-transform: uppercase; letter-spacing: .5px; }
+
+.label { font-size: var(--fs-xs); color: #777; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 var(--sp-2); }
