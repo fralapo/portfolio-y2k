@@ -58,5 +58,21 @@
   "skill.tab.soft": "Soft",
   "metro.about": "About",
   "metro.skills": "Skills",
-  "metro.contact": "Contact"
+  "metro.contact": "Contact",
+  "icon.about": "About",
+  "icon.skills": "Skills",
+  "icon.contact": "Contact",
+  "icon.readme": "README.txt",
+  "icon.cv": "CV.pdf",
+  "page.readme.title": "README.txt - Notepad",
+  "page.cv.title": "CV.pdf - Adobe Reader",
+  "cv.role": "Graphic Designer · UI/UX · Motion",
+  "cv.section.contact": "Contact",
+  "cv.section.experience": "Experience",
+  "cv.section.education": "Education",
+  "cv.section.tools": "Tools",
+  "cv.section.languages": "Languages",
+  "cv.exp.futuroma": "Wireframes, interface design, user flows for web projects. Adobe CC + Figma.",
+  "cv.edu.naba": "Branding, digital campaigns, web. Focus on UX/UI, art direction, motion. 4 team projects in portfolio.",
+  "page.readme.body": "  +------------------------------------------+\n  |  welcome to jacopo's desktop             |\n  +------------------------------------------+\n\n  this is a portfolio shaped like an archived pc.\n  click any icon to open it.\n  drag icons to rearrange the desktop.\n\n  what's here:\n    - 9 projects (click to read)\n    - about / skills / contact\n    - cv.pdf (career summary)\n    - yellow sticky notes\n\n  shortcuts:\n    - esc          close active window\n    - tab          navigate inside window\n    - flag         switch language from tray\n    - speaker      toggle ambient audio\n\n  stack: vanilla html + css + js, no build.\n  source: github.com/fralapo/portfolio-y2k\n\n  enjoy.\n  - j."
 }

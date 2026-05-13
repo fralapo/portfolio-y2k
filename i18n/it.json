@@ -58,5 +58,21 @@
   "skill.tab.soft": "Soft",
   "metro.about": "Chi sono",
   "metro.skills": "Competenze",
-  "metro.contact": "Contatti"
+  "metro.contact": "Contatti",
+  "icon.about": "Chi sono",
+  "icon.skills": "Competenze",
+  "icon.contact": "Contatti",
+  "icon.readme": "README.txt",
+  "icon.cv": "CV.pdf",
+  "page.readme.title": "README.txt — Notepad",
+  "page.readme.body": "  +------------------------------------------+\n  |  benvenutə nel desktop di jacopo         |\n  +------------------------------------------+\n\n  questo è un portfolio in forma di pc archiviato.\n  clicca una qualsiasi icona per aprirla.\n  trascina le icone per riorganizzare il desktop.\n\n  cosa trovi qui:\n    - 9 progetti (click per leggere)\n    - chi sono / competenze / contatti\n    - cv.pdf (riassunto carriera)\n    - post-it gialli\n\n  scorciatoie:\n    - esc          chiude finestra attiva\n    - tab          naviga dentro finestra\n    - bandiera     cambia lingua dal vassoio\n    - speaker      attiva audio ambient\n\n  stack: vanilla html + css + js, niente build.\n  source: github.com/fralapo/portfolio-y2k\n\n  buona esplorazione.\n  - j.",
+  "page.cv.title": "CV.pdf — Adobe Reader",
+  "cv.role": "Graphic Designer · UI/UX · Motion",
+  "cv.section.contact": "Contatti",
+  "cv.section.experience": "Esperienza",
+  "cv.section.education": "Formazione",
+  "cv.section.tools": "Strumenti",
+  "cv.section.languages": "Lingue",
+  "cv.exp.futuroma": "Wireframes, interface design, user flows per progetti web. Adobe CC + Figma.",
+  "cv.edu.naba": "Branding, campagne digitali, web. Focus UX/UI, art direction, motion. 4 progetti di squadra in portfolio."
 }

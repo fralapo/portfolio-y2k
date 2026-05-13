@@ -19,7 +19,9 @@ function renderTaskButtons() {
     const btn = document.createElement('button');
     btn.className = 'task-btn';
     if (window.AppState.focusedWindowId === id && !inst.el.classList.contains('is-minimized')) btn.classList.add('is-active');
-    btn.innerHTML = `<img src="assets/img/icons/${id.split('-')[0]}.svg" alt=""> <span>${inst.el.querySelector('.window-title').textContent}</span>`;
+    const desktopBtn = document.querySelector(`.icon[data-window="${id}"]`);
+    const iconKey = desktopBtn?.dataset.icon || id;
+    btn.innerHTML = `<img src="assets/img/icons/${iconKey}.svg" alt=""> <span>${inst.el.querySelector('.window-title').textContent}</span>`;
     btn.addEventListener('click', () => {
       if (inst.el.classList.contains('is-minimized') || window.AppState.focusedWindowId !== id) focusWindow(id);
       else minimizeWindow(id);

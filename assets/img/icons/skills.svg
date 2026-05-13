@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Skills">
+  <defs>
+    <linearGradient id="sk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe082"/>
+      <stop offset="1" stop-color="#c97f00"/>
+    </linearGradient>
+    <linearGradient id="sk-gl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="url(#sk-bg)" stroke="#6a3c00"/>
+  <rect x="4" y="4" width="56" height="28" rx="10" fill="url(#sk-gl)"/>
+  <rect x="14" y="14" width="36" height="38" rx="3" fill="#fff" stroke="#6a3c00" stroke-width="1.5"/>
+  <path d="M22 32 L26 36 L34 26" stroke="#2a8a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="22" y1="22" x2="42" y2="22" stroke="#6a3c00" stroke-width="1.5"/>
+  <line x1="22" y1="42" x2="42" y2="42" stroke="#6a3c00" stroke-width="1.5"/>
+  <line x1="22" y1="46" x2="38" y2="46" stroke="#6a3c00" stroke-width="1.5"/>
+  <text x="32" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="bold" fill="#fff">SKILLS</text>
+</svg>

@@ -46,9 +46,11 @@ export async function openWindow(id) {
   const titleText = titleEl ? titleEl.textContent.trim() : id;
   clone.querySelector('.window-title').textContent = titleText;
 
-  // Icon
+  // Icon — read from desktop button data-icon attr, fall back to id
   const iconImg = clone.querySelector('.window-icon');
-  iconImg.src = `assets/img/icons/${id.split('-')[0]}.svg`;
+  const desktopBtn = document.querySelector(`.icon[data-window="${id}"]`);
+  const iconKey = desktopBtn?.dataset.icon || id;
+  iconImg.src = `assets/img/icons/${iconKey}.svg`;
 
   LAYER.appendChild(clone);
   // Focus trap
