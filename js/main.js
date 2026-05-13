@@ -37,10 +37,14 @@ const obs = new MutationObserver(muts => {
 });
 obs.observe(document.querySelector('.windows-layer'), { childList: true });
 
-// Esc closes focused window
+// Esc closes focused window; Meta key opens start menu
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape' && window.AppState.focusedWindowId) {
     import('./window-manager.js').then(m => m.closeWindow(window.AppState.focusedWindowId));
+  }
+  if ((e.key === 'Meta' || e.key === 'OS') && !e.repeat) {
+    e.preventDefault();
+    document.querySelector('.start-orb').click();
   }
 });
 

@@ -51,6 +51,21 @@ export async function openWindow(id) {
   iconImg.src = `/assets/img/icons/${id.split('-')[0]}.png`;
 
   LAYER.appendChild(clone);
+  // Focus trap
+  clone.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusables = clone.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+    if (focusables.length === 0) return;
+    const first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  // Set initial focus
+  queueMicrotask(() => {
+    const firstFocusable = clone.querySelector('button:not(.win-close), [href], input');
+    (firstFocusable ?? clone.querySelector('.win-close')).focus();
+  });
   window.AppState.openWindows.set(id, { el: clone });
 
   wireControls(clone, id);
@@ -64,6 +79,10 @@ export async function openWindow(id) {
 }
 
 function wireControls(el, id) {
+  const titleId = `win-title-${id}`;
+  el.querySelector('.window-title').id = titleId;
+  el.setAttribute('aria-labelledby', titleId);
+  el.setAttribute('aria-modal', 'true');
   el.querySelector('.win-close').addEventListener('click', () => closeWindow(id));
   el.querySelector('.win-min').addEventListener('click', () => minimizeWindow(id));
   el.querySelector('.win-max').addEventListener('click', () => toggleMaximize(id));
