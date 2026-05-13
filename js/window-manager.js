@@ -68,6 +68,13 @@ function wireControls(el, id) {
   el.querySelector('.win-min').addEventListener('click', () => minimizeWindow(id));
   el.querySelector('.win-max').addEventListener('click', () => toggleMaximize(id));
   el.addEventListener('pointerdown', () => focusWindow(id));
+  el.querySelectorAll('[role="tab"]').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      el.querySelectorAll('[role="tab"]').forEach(t => t.classList.toggle('is-active', t === tab));
+      el.querySelectorAll('[data-tab-panel]').forEach(p => p.classList.toggle('is-active', p.dataset.tabPanel === target));
+    });
+  });
 }
 
 export function focusWindow(id) {
