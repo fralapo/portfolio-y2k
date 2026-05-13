@@ -16,18 +16,25 @@ This portfolio uses third-party assets for the authentic Windows 7 desktop feel.
 ### bartekl1/windows-ui-assets
 - Source: https://github.com/bartekl1/windows-ui-assets
 - Repo description: "Unofficial collection of UI assets (wallpapers, icons, cursors, sounds) from various versions of Microsoft Windows (XP through 11)"
-- Files used (copied from `Cursors/Windows 7/` and `Wallpapers/Windows 7/Desktop/Windows/`):
-  - `assets/cursors/aero.cur` (was upstream `aero_arrow.cur`)
-  - `assets/cursors/aero-link.cur` (was `aero_link.cur`)
-  - `assets/cursors/aero-wait.ani` (was `aero_busy.ani`)
-  - `assets/img/wallpaper/win7-default.jpg` (was `img0.jpg`)
+- **Cursors** copied from `Cursors/Windows 7/`:
+  - `aero.cur` (`aero_arrow.cur`), `aero-link.cur` (`aero_link.cur`), `aero-wait.ani` (`aero_busy.ani`) — wired into `cursors.css`
+  - Bundle alternates for future use: `aero_ew`, `aero_helpsel`, `aero_move`, `aero_nesw`, `aero_ns`, `aero_nwse`, `aero_pen`, `aero_unavail`, `aero_up`, `aero_working.ani`
+- **Wallpapers** copied from `Wallpapers/Windows 7/Desktop/`:
+  - `win7-default.jpg` (`Windows/img0.jpg`) — active wallpaper
+  - Alternates: `win7-architecture.jpg`, `win7-characters.jpg`, `win7-landscapes.jpg`, `win7-nature.jpg`, `win7-scenes.jpg`
 - Upstream has no LICENSE file; assets are unofficial archival copies of Microsoft Windows 7 UI elements.
 
 ### MCPlayer2015/all-windows-sounds
 - Source: https://github.com/MCPlayer2015/all-windows-sounds
 - Repo description: "Every Windows sound Microsoft ever made"
-- Files used (copied from `(2009) Windows 7/`):
-  - `assets/audio/win7-startup.wav` (was `Startup.wav`)
+- **Sounds** copied from `(2009) Windows 7/`:
+  - `win7-startup.wav` (`Startup.wav`) — wired to tray audio toggle
+  - Alternates ready for future hooks:
+    - System lifecycle: `win7-logon-sound.wav`, `win7-logoff-sound.wav`, `win7-shutdown.wav`
+    - Notifications: `win7-balloon.wav`, `win7-notify.wav`, `win7-ding.wav`, `win7-information-bar.wav`, `win7-menu-command.wav`
+    - Errors / BSOD: `win7-critical-stop.wav`, `win7-error.wav`, `win7-exclamation.wav`
+    - Window lifecycle: `win7-minimize.wav`, `win7-restore.wav`, `win7-recycle.wav`
+    - Other: `win7-user-account-control.wav`, `tada.wav`, `chimes.wav`
 - Upstream has no LICENSE file; assets are archival copies of Microsoft Windows sound effects.
 
 ## Other authentic Win7 icon sources (referenced, not bundled)
