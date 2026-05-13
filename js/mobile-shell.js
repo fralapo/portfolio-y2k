@@ -7,10 +7,10 @@ async function openMetroWindow(id) {
   const body = win.querySelector('.metro-window-body');
   let fragment = '<p>⚠️ Not found</p>';
   try {
-    const res = await fetch(`/windows/${id}.html`) ;
+    const res = await fetch(`windows/${id}.html`) ;
     if (res.ok) fragment = await res.text();
     else {
-      const r2 = await fetch(`/pages/${id}.html`);
+      const r2 = await fetch(`pages/${id}.html`);
       if (r2.ok) fragment = await r2.text();
     }
   } catch {}

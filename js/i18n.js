@@ -1,7 +1,7 @@
 let dictionary = {};
 
 export async function loadDictionary(lang) {
-  const res = await fetch(`/i18n/${lang}.json`);
+  const res = await fetch(`i18n/${lang}.json`);
   if (!res.ok) throw new Error('i18n fetch failed');
   dictionary = await res.json();
   document.documentElement.lang = lang;

@@ -15,14 +15,14 @@ export async function openWindow(id) {
   }
   let fragment;
   try {
-    const url = `/windows/${id}.html`;
+    const url = `windows/${id}.html`;
     const res = await fetch(url);
     if (!res.ok) throw new Error('not found');
     fragment = await res.text();
   } catch (e) {
     // try /pages/
     try {
-      const res = await fetch(`/pages/${id}.html`);
+      const res = await fetch(`pages/${id}.html`);
       if (!res.ok) throw e;
       fragment = await res.text();
     } catch {
@@ -48,7 +48,7 @@ export async function openWindow(id) {
 
   // Icon
   const iconImg = clone.querySelector('.window-icon');
-  iconImg.src = `/assets/img/icons/${id.split('-')[0]}.png`;
+  iconImg.src = `assets/img/icons/${id.split('-')[0]}.png`;
 
   LAYER.appendChild(clone);
   // Focus trap

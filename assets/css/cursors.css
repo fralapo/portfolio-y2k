@@ -1,7 +1,7 @@
-body { cursor: url('/assets/cursors/aero.cur'), default; }
+body { cursor: url('assets/cursors/aero.cur'), default; }
 a, button, [role="button"], .icon, .task-btn, .window-controls button {
-  cursor: url('/assets/cursors/aero-link.cur'), pointer;
+  cursor: url('assets/cursors/aero-link.cur'), pointer;
 }
 .is-loading, .is-loading * {
-  cursor: url('/assets/cursors/aero-wait.ani'), wait;
+  cursor: url('assets/cursors/aero-wait.ani'), wait;
 }

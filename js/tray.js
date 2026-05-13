@@ -12,7 +12,7 @@ function setAudioState(on) {
   AUDIO_BTN.setAttribute('aria-pressed', String(on));
   AUDIO_BTN.dataset.i18nAria = on ? 'tray.audio.on' : 'tray.audio.off';
   if (on) {
-    audioEl ??= new Audio('/assets/audio/ambient.ogg');
+    audioEl ??= new Audio('assets/audio/ambient.ogg');
     audioEl.loop = true; audioEl.volume = 0.3;
     audioEl.play().catch(() => setAudioState(false));
   } else if (audioEl) {

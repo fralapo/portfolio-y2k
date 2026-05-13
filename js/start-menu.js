@@ -30,7 +30,7 @@ export function initStartMenu() {
     b.addEventListener('click', () => { openWindow(b.dataset.window); close(); });
   });
   MENU.querySelector('[data-action="shutdown"]').addEventListener('click', () => {
-    location.href = '/404.html?reason=shutdown';
+    location.href = '404.html?reason=shutdown';
   });
   // Search filter icone desktop
   const search = MENU.querySelector('.sm-search input');
