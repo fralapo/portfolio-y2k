@@ -42,7 +42,23 @@
     <div class="windows-layer" aria-live="polite"></div>
 
     <!-- Start menu -->
-    <nav class="start-menu" hidden aria-label="Start menu"></nav>
+    <nav class="start-menu" hidden aria-label="Start menu">
+      <header class="sm-header">
+        <img src="/assets/img/icons/avatar.png" alt="" width="40" height="40">
+        <span>jacopo</span>
+      </header>
+      <ul class="sm-list" role="list">
+        <li><button data-window="about" data-i18n="start.about">Chi sono</button></li>
+        <li><button data-window="skills" data-i18n="start.skills">Competenze</button></li>
+        <li><button data-window="contact" data-i18n="start.contact">Contatti</button></li>
+      </ul>
+      <div class="sm-search">
+        <input type="search" placeholder="Cerca…" data-i18n-placeholder="start.search" aria-label="Cerca">
+      </div>
+      <footer class="sm-footer">
+        <button data-action="shutdown" data-i18n="start.shutdown">Spegni</button>
+      </footer>
+    </nav>
 
     <!-- Taskbar -->
     <footer class="taskbar" role="contentinfo">

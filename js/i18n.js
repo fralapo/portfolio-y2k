@@ -21,6 +21,10 @@ export function applyI18n(root = document) {
     const k = el.dataset.i18nAria;
     if (dictionary[k] !== undefined) el.setAttribute('aria-label', dictionary[k]);
   });
+  root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const k = el.dataset.i18nPlaceholder;
+    if (dictionary[k] !== undefined) el.placeholder = dictionary[k];
+  });
 }
 
 export async function setLang(lang) {
