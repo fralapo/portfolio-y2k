@@ -1,0 +1,62 @@
+/* Aero design tokens. Single source of truth for color, gradient, blur, shadow, type. */
+:root {
+  /* Sky palette */
+  --aero-sky-top:    #5fa9d8;
+  --aero-sky-bottom: #1b5b9e;
+  --aero-sky-grad:   linear-gradient(180deg, var(--aero-sky-top) 0%, var(--aero-sky-bottom) 100%);
+
+  /* Glass */
+  --glass-bg:        rgba(255, 255, 255, 0.18);
+  --glass-bg-strong: rgba(255, 255, 255, 0.32);
+  --glass-border:    rgba(255, 255, 255, 0.5);
+  --glass-blur:      blur(12px);
+
+  /* Window chrome */
+  --win-titlebar-grad-focused:   linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.15));
+  --win-titlebar-grad-unfocused: linear-gradient(180deg, rgba(220,230,245,.45), rgba(180,200,220,.20));
+  --win-bg:                      rgba(245, 250, 255, 0.95);
+  --win-text:                    #1a2c3d;
+  --win-shadow:                  0 12px 32px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.2);
+
+  /* Taskbar */
+  --taskbar-grad:  linear-gradient(180deg, rgba(40,60,100,.85), rgba(20,40,80,.95));
+  --taskbar-h:     40px;
+
+  /* Type */
+  --font-ui:    'Segoe UI', 'Open Sans', 'Inter', system-ui, sans-serif;
+  --font-mono:  'Cascadia Code', 'Consolas', monospace;
+  --fs-xs:  11px;
+  --fs-sm:  12px;
+  --fs-md:  14px;
+  --fs-lg:  18px;
+  --fs-xl:  24px;
+
+  /* Spacing */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
+
+  /* Radii */
+  --r-sm: 4px; --r-md: 6px; --r-lg: 10px;
+
+  /* Z layers */
+  --z-desktop: 1;
+  --z-icons:   10;
+  --z-sticky:  20;
+  --z-window:  100;   /* incrementato dinamicamente */
+  --z-taskbar: 9000;
+  --z-start:   9100;
+  --z-modal:   9500;
+
+  /* Metro palette (mobile) */
+  --metro-teal:   #00aba9;
+  --metro-lime:   #a4c400;
+  --metro-red:    #e51400;
+  --metro-orange: #f0a30a;
+  --metro-blue:   #1ba1e2;
+  --metro-violet: #aa00ff;
+}
+
+/* prefers-reduced-motion override */
+@media (prefers-reduced-motion: reduce) {
+  :root { --transition-fast: 0s; --transition-med: 0s; }
+}
