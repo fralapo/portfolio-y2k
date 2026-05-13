@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jacopino.dev/sitemap.xml

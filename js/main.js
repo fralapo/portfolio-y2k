@@ -54,6 +54,15 @@ initStickyNotes();
 initMobileShell();
 initTaskbar();
 
+// Deep-link: ?window=<id>&lang=<it|en>
+const params = new URLSearchParams(location.search);
+if (params.get('lang')) {
+  await setLang(params.get('lang'));
+}
+if (params.get('window')) {
+  await openWindow(params.get('window'));
+}
+
 console.info('Portfolio Y2K — ready');
 
 // Visitor counter fetch (works only from public domain; localhost will silent-fail)
