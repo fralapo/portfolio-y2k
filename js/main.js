@@ -5,6 +5,7 @@ import { initTaskbar } from './taskbar.js';
 import { initTray } from './tray.js';
 import { initStickyNotes } from './sticky-notes.js';
 import { initMobileShell } from './mobile-shell.js';
+import { initDesktopIcons } from './desktop-icons.js';
 import { loadDictionary, applyI18n, setLang } from './i18n.js';
 
 window.AppState = {
@@ -21,13 +22,8 @@ await loadDictionary(window.AppState.lang);
 applyI18n();
 window.applyI18n = applyI18n;  // expose for window-manager dynamic content
 
-// Wire desktop icons
-document.querySelectorAll('.icon[data-window]').forEach(btn => {
-  btn.addEventListener('click', () => openWindow(btn.dataset.window));
-  btn.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openWindow(btn.dataset.window); }
-  });
-});
+// Desktop icons: drag + click (handled by desktop-icons.js)
+initDesktopIcons();
 
 // Make new windows draggable when added
 const obs = new MutationObserver(muts => {
