@@ -1,5 +1,7 @@
 // Bootstrap.
 import { openWindow, makeDraggable } from './window-manager.js';
+import { initTaskbar } from './taskbar.js';
+import { loadDictionary, applyI18n, setLang } from './i18n.js';
 
 window.AppState = {
   lang: localStorage.getItem('lang') || 'it',
@@ -9,6 +11,11 @@ window.AppState = {
   zIndexCounter: 100,
   startMenuOpen: false,
 };
+
+// Bootstrap i18n first (top-level await ok inside <script type="module">)
+await loadDictionary(window.AppState.lang);
+applyI18n();
+window.applyI18n = applyI18n;  // expose for window-manager dynamic content
 
 // Wire desktop icons
 document.querySelectorAll('.icon[data-window]').forEach(btn => {
@@ -32,5 +39,7 @@ window.addEventListener('keydown', e => {
     import('./window-manager.js').then(m => m.closeWindow(window.AppState.focusedWindowId));
   }
 });
+
+initTaskbar();
 
 console.info('Portfolio Y2K — ready');
