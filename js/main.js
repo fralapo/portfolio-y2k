@@ -49,3 +49,10 @@ initStickyNotes();
 initTaskbar();
 
 console.info('Portfolio Y2K — ready');
+
+// Visitor counter fetch (works only from public domain; localhost will silent-fail)
+fetch('https://jacopino.goatcounter.com/counter//TOTAL.txt')
+  .then(r => r.text()).then(t => {
+    const el = document.getElementById('visitor-count');
+    if (el) el.textContent = t.trim();
+  }).catch(() => {});

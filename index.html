@@ -69,6 +69,9 @@
       <div class="tray">
         <button class="tray-audio" aria-pressed="false" data-i18n-aria="tray.audio.off" aria-label="Audio muto">🔇</button>
         <button class="tray-lang" aria-label="Lingua" data-current-lang="it">🇮🇹</button>
+        <span class="tray-counter" title="Visitors">
+          👁️ <span id="visitor-count">—</span>
+        </span>
         <span class="tray-wifi" aria-hidden="true">📶</span>
       </div>
       <time class="clock" datetime=""></time>
@@ -95,6 +98,9 @@
     </article>
   </template>
 
+  <script
+    data-goatcounter="https://jacopino.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
