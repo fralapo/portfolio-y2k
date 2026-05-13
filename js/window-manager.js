@@ -13,21 +13,20 @@ export async function openWindow(id) {
     focusWindow(id);
     return;
   }
+  // Folders use `folder-<slug>` id → fetch from /folders/<slug>.html
   let fragment;
-  try {
-    const url = `windows/${id}.html`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error('not found');
-    fragment = await res.text();
-  } catch (e) {
-    // try /pages/
+  const folderMatch = id.match(/^folder-(.+)$/);
+  const candidates = folderMatch
+    ? [`folders/${folderMatch[1]}.html`]
+    : [`windows/${id}.html`, `pages/${id}.html`, `folders/${id}.html`];
+  for (const url of candidates) {
     try {
-      const res = await fetch(`pages/${id}.html`);
-      if (!res.ok) throw e;
-      fragment = await res.text();
-    } catch {
-      fragment = `<p>⚠️ File not found: <code>${id}</code></p><button onclick="this.closest('.window').querySelector('.win-close').click()">Back</button>`;
-    }
+      const res = await fetch(url);
+      if (res.ok) { fragment = await res.text(); break; }
+    } catch {}
+  }
+  if (fragment === undefined) {
+    fragment = `<p>⚠️ File not found: <code>${id}</code></p><button onclick="this.closest('.window').querySelector('.win-close').click()">Back</button>`;
   }
 
   const clone = TEMPLATE.content.firstElementChild.cloneNode(true);
@@ -46,10 +45,14 @@ export async function openWindow(id) {
   const titleText = titleEl ? titleEl.textContent.trim() : id;
   clone.querySelector('.window-title').textContent = titleText;
 
-  // Icon — read from desktop button data-icon attr, fall back to id
+  // Icon — read from desktop/folder button data-icon attr, fall back: folder id → folder icon
   const iconImg = clone.querySelector('.window-icon');
-  const desktopBtn = document.querySelector(`.icon[data-window="${id}"]`);
-  const iconKey = desktopBtn?.dataset.icon || id;
+  const sourceBtn = document.querySelector(`.icon[data-window="${id}"]`);
+  let iconKey = sourceBtn?.dataset.icon;
+  if (!iconKey) {
+    if (id === 'folder-progetti' || id.startsWith('folder-')) iconKey = id === 'folder-progetti' ? 'progetti' : `cat-${id.replace('folder-', '')}`;
+    else iconKey = id;
+  }
   iconImg.src = `assets/img/icons/${iconKey}.svg`;
 
   LAYER.appendChild(clone);
@@ -72,6 +75,14 @@ export async function openWindow(id) {
 
   wireControls(clone, id);
   focusWindow(id);
+
+  // Wire folder icons inside this window (click → open target)
+  clone.querySelectorAll('.folder-grid .icon[data-window]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openWindow(btn.dataset.window);
+    });
+  });
 
   // i18n hook (filled in Task 11)
   if (window.applyI18n) window.applyI18n(clone);

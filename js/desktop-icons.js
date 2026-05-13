@@ -1,19 +1,12 @@
 // Desktop icons: draggable + click-to-open.
-// Click = release without move → open window. Drag = move + persist position.
-//
-// Persistence: localStorage key `icon-positions` stores { [windowId]: {left,top} }.
+// Click = release without move → open window. Drag = move position (session only, not persisted).
+// Layout always resets to default on reload.
 
 import { openWindow } from './window-manager.js';
 
-const STORE = 'icon-positions';
 const ICON_W = 96, ICON_H = 100;
 const PAD = 16;
 const DRAG_THRESHOLD = 5; // px before pointerdown counts as drag, not click
-
-function readPositions() {
-  try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch { return {}; }
-}
-function writePositions(p) { localStorage.setItem(STORE, JSON.stringify(p)); }
 
 function defaultLayout(ids) {
   // Auto-flow column-first from top-left. Wrap to new column when overflow.
@@ -46,11 +39,8 @@ export function initDesktopIcons() {
   if (items.length === 0) return;
 
   const ids = items.map(li => li.querySelector('.icon').dataset.window);
-  let positions = readPositions();
-  // Fill any missing ids with default layout
-  if (ids.some(id => !positions[id])) {
-    positions = { ...defaultLayout(ids), ...positions };
-  }
+  // Always start from default layout (no persistence)
+  const positions = defaultLayout(ids);
   items.forEach(li => {
     const id = li.querySelector('.icon').dataset.window;
     apply(li, clamp(positions[id]));
@@ -89,8 +79,8 @@ export function initDesktopIcons() {
       active = false;
       icon.classList.remove('is-dragging');
       if (moved) {
+        // Session-only position update (not persisted; resets on reload)
         positions[id] = { left: li.offsetLeft, top: li.offsetTop };
-        writePositions(positions);
       } else {
         // Treat as click → open window
         openWindow(id);
@@ -115,6 +105,5 @@ export function initDesktopIcons() {
       apply(li, clamped);
       positions[id] = clamped;
     });
-    writePositions(positions);
   });
 }

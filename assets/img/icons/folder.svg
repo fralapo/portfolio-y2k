@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Folder">
+  <defs>
+    <linearGradient id="fld-tab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3a0"/>
+      <stop offset="1" stop-color="#e8b633"/>
+    </linearGradient>
+    <linearGradient id="fld-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe790"/>
+      <stop offset=".7" stop-color="#f5b400"/>
+      <stop offset="1" stop-color="#c08800"/>
+    </linearGradient>
+    <linearGradient id="fld-gl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M6 18 L24 18 L28 22 L58 22 L58 26 L6 26 Z" fill="url(#fld-tab)" stroke="#7a5800" stroke-width="1"/>
+  <rect x="6" y="24" width="52" height="30" rx="2" fill="url(#fld-body)" stroke="#7a5800" stroke-width="1"/>
+  <rect x="6" y="24" width="52" height="14" rx="2" fill="url(#fld-gl)"/>
+</svg>
