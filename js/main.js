@@ -4,6 +4,7 @@ import { initStartMenu } from './start-menu.js';
 import { initTaskbar } from './taskbar.js';
 import { initTray } from './tray.js';
 import { initStickyNotes } from './sticky-notes.js';
+import { initMobileShell } from './mobile-shell.js';
 import { loadDictionary, applyI18n, setLang } from './i18n.js';
 
 window.AppState = {
@@ -46,6 +47,7 @@ window.addEventListener('keydown', e => {
 initTray();
 initStartMenu();
 initStickyNotes();
+initMobileShell();
 initTaskbar();
 
 console.info('Portfolio Y2K — ready');

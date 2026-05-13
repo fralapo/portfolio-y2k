@@ -1,0 +1,58 @@
+@media (max-width: 768px) {
+  /* Hide desktop chrome */
+  .icons-grid, .sticky-notes, .taskbar, .start-menu, .windows-layer { display: none !important; }
+
+  body { background: #1f1f1f; }
+
+  .metro-shell { display: block; min-height: 100vh; color: #fff; }
+
+  .metro-topbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 16px;
+    font-size: 18px; font-weight: 300; letter-spacing: .5px;
+    background: #000;
+  }
+  .metro-topbar button {
+    background: none; border: 0; color: #fff; font-size: 16px;
+  }
+
+  .metro-tiles {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; padding: 8px;
+  }
+  .metro-tile {
+    aspect-ratio: 1 / 1;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 16px;
+    color: #fff; font-weight: 300; font-size: 16px;
+    text-align: left; text-decoration: none;
+    background: var(--metro-teal);
+    border: 0;
+  }
+  .metro-tile-wide { grid-column: span 2; aspect-ratio: 2 / 1; }
+  .metro-tile:nth-child(6n+1) { background: var(--metro-teal); }
+  .metro-tile:nth-child(6n+2) { background: var(--metro-lime); }
+  .metro-tile:nth-child(6n+3) { background: var(--metro-red); }
+  .metro-tile:nth-child(6n+4) { background: var(--metro-orange); }
+  .metro-tile:nth-child(6n+5) { background: var(--metro-blue); }
+  .metro-tile:nth-child(6n+6) { background: var(--metro-violet); }
+
+  .metro-window {
+    position: fixed; inset: 0; background: #1f1f1f; color: #fff;
+    overflow: auto; padding: 16px;
+    z-index: 9999;
+    display: none;
+  }
+  .metro-window.is-open { display: block; }
+  .metro-window .back {
+    background: none; border: 0; color: #fff;
+    font-size: 24px; padding: 0; margin-bottom: 12px;
+  }
+  .metro-window h2 { font-weight: 300; font-size: 28px; margin: 0 0 16px; }
+  .metro-window p { font-size: 16px; line-height: 1.5; }
+}
+
+/* Hide metro shell on desktop */
+@media (min-width: 769px) {
+  .metro-shell { display: none !important; }
+}

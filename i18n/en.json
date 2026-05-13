@@ -55,5 +55,8 @@
   "skill.tab.tools": "Tools",
   "skill.tab.code": "Code",
   "skill.tab.hard": "Hard",
-  "skill.tab.soft": "Soft"
+  "skill.tab.soft": "Soft",
+  "metro.about": "About",
+  "metro.skills": "Skills",
+  "metro.contact": "Contact"
 }
