@@ -1,0 +1,361 @@
+/* ============================================================
+   FRUTIGER AERO DESIGN TOKENS
+   Copy this file into your project root or styles/ directory.
+   Import in main CSS: @import "aero-tokens.css";
+   ============================================================ */
+
+:root {
+  /* ============================================================
+     COLOR SYSTEM
+     ============================================================ */
+
+  /* AERO GREEN — primary brand color (period-accurate from frutigeraeroarchive.org) */
+  --aero-green-50:  hsl(140, 60%, 97%);
+  --aero-green-100: hsl(135, 65%, 90%);
+  --aero-green-200: hsl(132, 70%, 78%);
+  --aero-green-300: hsl(130, 73%, 65%);
+  --aero-green-400: hsl(130, 75%, 55%);
+  --aero-green-500: hsl(130, 75%, 45%);  /* ≈ #3cda56 Aero archive link color */
+  --aero-green-600: hsl(130, 80%, 35%);
+  --aero-green-700: hsl(130, 82%, 28%);  /* ≈ #148d28 selection */
+  --aero-green-800: hsl(130, 84%, 18%);
+  --aero-green-900: hsl(130, 85%, 12%);
+  --aero-green-glow: #57fa6f;            /* Active nav highlight (archive site) */
+
+  /* AERO BLUE — secondary brand color */
+  --aero-blue-50:  hsl(210, 100%, 97%);
+  --aero-blue-200: hsl(210, 90%, 80%);
+  --aero-blue-500: hsl(210, 75%, 55%);
+  --aero-blue-700: hsl(210, 80%, 35%);
+  --aero-blue-900: hsl(210, 85%, 15%);
+
+  /* NEUTRAL GREYS — cool-tinted to match Aero blue family */
+  --grey-50:  hsl(220, 14%, 96%);
+  --grey-100: hsl(220, 13%, 91%);
+  --grey-200: hsl(220, 13%, 82%);
+  --grey-300: hsl(220, 9%, 70%);
+  --grey-400: hsl(220, 9%, 55%);
+  --grey-500: hsl(220, 9%, 40%);
+  --grey-600: hsl(220, 13%, 30%);
+  --grey-700: hsl(220, 13%, 23%);
+  --grey-800: hsl(220, 13%, 14%);
+  --grey-900: hsl(220, 13%, 9%);
+
+  /* SEMANTIC COLORS — multi-shade for backgrounds + text */
+  --red-50:    hsl(0, 100%, 97%);
+  --red-600:   hsl(0, 84%, 45%);
+  --red-900:   hsl(0, 70%, 25%);
+
+  --yellow-50: hsl(48, 100%, 95%);
+  --yellow-600: hsl(38, 92%, 50%);
+  --yellow-900: hsl(28, 75%, 25%);
+
+  /* ============================================================
+     SEMANTIC ALIASES
+     Component code references these, not raw colors above.
+     Switch theme by overriding these in [data-theme="..."].
+     ============================================================ */
+
+  /* Bright Aero default (light bg + green accent) */
+  --color-bg-page: var(--grey-50);
+  --color-bg-surface: rgba(255, 255, 255, 0.85);
+  --color-bg-glass: rgba(255, 255, 255, 0.6);
+  --color-text-primary: var(--grey-900);
+  --color-text-secondary: var(--grey-700);
+  --color-text-muted: var(--grey-500);
+  --color-text-on-accent: white;
+  --color-accent: var(--aero-green-500);
+  --color-accent-hover: var(--aero-green-glow);
+  --color-accent-dark: var(--aero-green-700);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-glass: rgba(255, 255, 255, 0.3);
+
+  /* ============================================================
+     SIGNATURE GRADIENTS (THE Frutiger Aero hallmark)
+     HARD mid-break at ~55% = period-accurate (2007 Vista feel)
+     SOFT mid-break with 2.6% transition = modern revival (2024+ feel)
+     ============================================================ */
+
+  /* PRIMARY BUTTON gradient — green glossy, hard break (period-accurate) */
+  --aero-gloss-button-green: linear-gradient(to bottom,
+    #ffffff 0%,
+    #82f577 3%,      /* bright highlight */
+    #32912a 40%,     /* mid */
+    #185815 55%,     /* HARD BREAK start */
+    #0b3112 55%,     /* HARD BREAK end (same %) */
+    #1a5c1e 100%);   /* darker bottom */
+
+  /* Modern soft variant — gentler revival feel */
+  --aero-gloss-button-green-soft: linear-gradient(to bottom,
+    #ffffff 0%,
+    #82f577 3%,
+    #32912a 40%,
+    #185815 52%,
+    #0b3112 56%,     /* 4% transition vs hard 0% */
+    #1a5c1e 100%);
+
+  /* Blue button gradient */
+  --aero-gloss-button-blue: linear-gradient(to bottom,
+    #ffffff 0%,
+    #82bbf5 3%,
+    #155888 40%,
+    #093060 55%,
+    #093060 55%,
+    #1a4a7c 100%);
+
+  /* Silver/metallic title bar (Vista chrome echo) */
+  --aero-titlebar: linear-gradient(to bottom,
+    #bebebe 0%,
+    #777 3%,
+    #232323 55%,
+    #000 55%,
+    #161616 98%,
+    #000 100%);
+
+  /* GLASS OVERLAY — apply ON TOP of glass containers for gloss */
+  --aero-glass-overlay: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(117, 117, 117, 0.15) 20%,
+    rgba(92, 92, 92, 0.15) 60%,
+    rgba(0, 0, 0, 0.30) 60%,
+    rgba(41, 41, 41, 0.30) 100%);
+
+  /* AURORA BACKGROUND — 4-layer radial mesh */
+  --aero-aurora-bg:
+    radial-gradient(ellipse at 20% 30%, rgba(60, 218, 86, 0.5), transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(95, 168, 211, 0.5), transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(190, 80, 220, 0.35), transparent 50%),
+    linear-gradient(180deg, #0d1b2a, #1b263b);
+
+  /* ============================================================
+     GLASS / DEPTH EFFECTS
+     ============================================================ */
+
+  /* Backdrop blur intensities */
+  --aero-blur-subtle: blur(1px) saturate(150%);   /* frutigeraeroarchive.org style */
+  --aero-blur-normal: blur(8px) saturate(150%);   /* balanced */
+  --aero-blur-strong: blur(15px) saturate(180%);  /* frutiger-aero.neocities.org style */
+
+  /* Gloss inset shadows (the "lifted" feeling) */
+  --aero-inset-gloss-subtle: inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                              inset 0 0 8px rgba(255, 255, 255, 0.08);
+  --aero-inset-gloss-strong: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+                              inset 0 -2px 1px rgba(0, 0, 0, 0.3);
+
+  /* Drop shadows (5-tier elevation) */
+  --aero-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --aero-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --aero-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --aero-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.25),
+                    0 5px 10px rgba(0, 0, 0, 0.15);
+  --aero-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3),
+                    0 10px 15px rgba(0, 0, 0, 0.2);
+
+  /* Glass card complete shadow recipe (drop + inset combined) */
+  --aero-shadow-glass-card:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 5px 10px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+
+  /* Glossy button complete shadow */
+  --aero-shadow-button:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -2px 1px rgba(0, 0, 0, 0.3);
+
+  /* ============================================================
+     TYPOGRAPHY
+     ============================================================ */
+
+  /* Font stacks — humanist sans (Frutiger Aero period authentic) */
+  --aero-font-body: "Segoe UI", "Frutiger", Tahoma, Geneva, Verdana, -apple-system, BlinkMacSystemFont, sans-serif;
+  --aero-font-display: "Segoe UI", "Frutiger", Tahoma, Geneva, sans-serif;
+
+  /* Optional modern alternatives (uncomment if preferred over Segoe UI) */
+  /* --aero-font-body: "Inter", system-ui, sans-serif; */
+  /* --aero-font-display: "Reckless", "Playfair Display", Georgia, serif; */
+
+  /* Type scale (hand-picked, no fractional pixels) */
+  --text-xs:    12px;
+  --text-sm:    14px;
+  --text-base:  16px;
+  --text-lg:    18px;
+  --text-xl:    20px;
+  --text-2xl:   24px;
+  --text-3xl:   30px;
+  --text-4xl:   36px;
+  --text-5xl:   48px;
+  --text-6xl:   60px;
+  --text-7xl:   72px;
+
+  /* Line heights */
+  --leading-tight:   1.1;
+  --leading-snug:    1.3;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* Font weights */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ============================================================
+     SPACING (4px base, non-linear scale)
+     ============================================================ */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* ============================================================
+     BORDER RADIUS
+     ============================================================ */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+
+  /* Asymmetric Aero radius signatures (period authentic — from oldweb survey) */
+  --radius-aero-header: 70px 80px 0 0;        /* archive site window signature */
+  --radius-aero-banner: 70px 70px 10px 10px;  /* derrek.org banner pattern */
+  --radius-aero-content: 5px 5px 30px 30px;   /* derrek.org main content */
+  --radius-aero-extreme: 70px 80px 10px 30px; /* all 4 different — extreme */
+
+  --radius-pill: 9999px;
+
+  /* ============================================================
+     MOTION
+     ============================================================ */
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms;
+  --duration-aurora: 20s;   /* Aurora gradient slow shift */
+
+  --ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:     cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================================
+     Z-INDEX SCALE
+     ============================================================ */
+  --z-base:    1;
+  --z-card:    10;
+  --z-nav:     20;
+  --z-overlay: 30;
+  --z-modal:   40;
+  --z-toast:   50;
+}
+
+/* ============================================================
+   DARK AERO THEME (Vista/Wii/PS3 era dark variant)
+   Add data-theme="dark-aero" to <html> or specific section
+   ============================================================ */
+[data-theme="dark-aero"] {
+  --color-bg-page: var(--grey-900);
+  --color-bg-surface: rgba(20, 20, 20, 0.85);    /* archive site value */
+  --color-bg-glass: rgba(27, 27, 27, 0.7);
+  --color-text-primary: var(--grey-50);
+  --color-text-secondary: var(--grey-300);
+  --color-text-muted: var(--grey-500);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-glass: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   FRUTIGER ECO THEME (eco-tech, sustainability focus)
+   ============================================================ */
+[data-theme="frutiger-eco"] {
+  --color-accent: var(--aero-green-700);          /* deeper green */
+  --color-accent-hover: var(--aero-green-500);
+  --color-bg-page: hsl(140, 25%, 96%);            /* warm green tint */
+  --color-bg-surface: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   AERO CREAM THEME (warm indie/cozy — derrek.org derived)
+   For Neocities-style personal sites, zine makers, indie creative
+   ============================================================ */
+[data-theme="aero-cream"] {
+  --color-bg-page: #d4cfc3;
+  --color-bg-surface: rgba(232, 229, 219, 0.85);
+  --color-bg-glass: rgba(232, 229, 219, 0.95);
+  --color-text-primary: #372e29;
+  --color-text-secondary: #9f9893;
+  --color-text-muted: #b5ada6;
+  --color-accent: #6b9a4f;                         /* warm green */
+  --color-accent-hover: #e1b63e;                   /* warm yellow */
+  --color-accent-dark: #2d5e1f;
+  --color-border: #c9bfb1;
+  --color-border-glass: rgba(201, 191, 177, 0.6);
+}
+
+/* ============================================================
+   AERO PEACH THEME (cinni.net light variant)
+   For personal/warm/dreamy sites
+   ============================================================ */
+[data-theme="aero-peach"] {
+  --color-bg-page: papayawhip;
+  --color-bg-surface: rgba(255, 239, 213, 0.9);
+  --color-bg-glass: rgba(255, 239, 213, 0.7);
+  --color-text-primary: sienna;
+  --color-text-secondary: #b87333;
+  --color-accent: #e8a0ae;
+  --color-accent-hover: #ffd2cd;
+  --color-border: #f4ddc8;
+}
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--aero-font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Universal text shadow for legibility on glossy/glass surfaces (archive site signature) */
+a, p, span, h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark-aero"] a,
+[data-theme="dark-aero"] p,
+[data-theme="dark-aero"] span,
+[data-theme="dark-aero"] h1,
+[data-theme="dark-aero"] h2,
+[data-theme="dark-aero"] h3,
+[data-theme="dark-aero"] h4 {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Reduced motion respect (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
