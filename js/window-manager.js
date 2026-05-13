@@ -48,7 +48,7 @@ export async function openWindow(id) {
 
   // Icon
   const iconImg = clone.querySelector('.window-icon');
-  iconImg.src = `assets/img/icons/${id.split('-')[0]}.png`;
+  iconImg.src = `assets/img/icons/${id.split('-')[0]}.svg`;
 
   LAYER.appendChild(clone);
   // Focus trap

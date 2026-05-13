@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bart's Room">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9b54"/>
+      <stop offset="1" stop-color="#c4471d"/>
+    </linearGradient>
+    <linearGradient id="gl2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="url(#bg2)" stroke="#7a2f12" stroke-width="1"/>
+  <rect x="4" y="4" width="56" height="28" rx="10" fill="url(#gl2)"/>
+  <rect x="14" y="32" width="36" height="14" rx="2" fill="#fff5e0" stroke="#6b3a14" stroke-width="1.5"/>
+  <rect x="14" y="40" width="36" height="6" fill="#3a5dd9"/>
+  <rect x="14" y="46" width="36" height="4" fill="#6b3a14"/>
+  <rect x="16" y="22" width="6" height="10" fill="#fff5e0" stroke="#6b3a14" stroke-width="1"/>
+  <rect x="42" y="22" width="6" height="10" fill="#fff5e0" stroke="#6b3a14" stroke-width="1"/>
+  <text x="32" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#fff">ROOM 3D</text>
+</svg>

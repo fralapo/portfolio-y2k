@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lo Sguardo dell'Incanto">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9d8df1"/>
+      <stop offset="1" stop-color="#4b2a8a"/>
+    </linearGradient>
+    <linearGradient id="gl7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="url(#bg7)" stroke="#2c1660"/>
+  <rect x="4" y="4" width="56" height="28" rx="10" fill="url(#gl7)"/>
+  <path d="M10 34 Q32 14 54 34 Q32 54 10 34 Z" fill="#fff" stroke="#2c1660" stroke-width="1.5"/>
+  <circle cx="32" cy="34" r="8" fill="#2c1660"/>
+  <circle cx="32" cy="34" r="4" fill="#fff"/>
+  <circle cx="34" cy="32" r="1.5" fill="#fff"/>
+  <text x="32" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-style="italic" fill="#fff">SGUARDO</text>
+</svg>

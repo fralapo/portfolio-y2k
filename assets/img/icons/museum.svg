@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Museum of Science Boston">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5e6c8"/>
+      <stop offset="1" stop-color="#a07840"/>
+    </linearGradient>
+    <linearGradient id="gl4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="url(#bg4)" stroke="#5c3a18" stroke-width="1"/>
+  <rect x="4" y="4" width="56" height="28" rx="10" fill="url(#gl4)"/>
+  <path d="M12 30 L32 14 L52 30 Z" fill="#3e2412"/>
+  <rect x="14" y="30" width="36" height="3" fill="#3e2412"/>
+  <rect x="16" y="33" width="4" height="14" fill="#fff5e0" stroke="#3e2412"/>
+  <rect x="24" y="33" width="4" height="14" fill="#fff5e0" stroke="#3e2412"/>
+  <rect x="32" y="33" width="4" height="14" fill="#fff5e0" stroke="#3e2412"/>
+  <rect x="40" y="33" width="4" height="14" fill="#fff5e0" stroke="#3e2412"/>
+  <rect x="12" y="47" width="40" height="4" fill="#3e2412"/>
+  <text x="32" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="#3e2412">MoS BOS</text>
+</svg>
