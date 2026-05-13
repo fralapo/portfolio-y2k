@@ -13,6 +13,23 @@ This portfolio uses third-party assets for the authentic Windows 7 desktop feel.
 - The upstream repo does not include an explicit LICENSE file. The Win2-7 icon theme tradition originates from community-maintained themes (see [Win2-7 icon theme history](https://github.com/B00merang-Artwork)). The included PNG glyphs are derivative artwork inspired by Microsoft's Windows 7 visual style.
 - This project uses these assets in a non-commercial personal portfolio context, consistent with the spirit of the upstream theme project.
 
+### bartekl1/windows-ui-assets
+- Source: https://github.com/bartekl1/windows-ui-assets
+- Repo description: "Unofficial collection of UI assets (wallpapers, icons, cursors, sounds) from various versions of Microsoft Windows (XP through 11)"
+- Files used (copied from `Cursors/Windows 7/` and `Wallpapers/Windows 7/Desktop/Windows/`):
+  - `assets/cursors/aero.cur` (was upstream `aero_arrow.cur`)
+  - `assets/cursors/aero-link.cur` (was `aero_link.cur`)
+  - `assets/cursors/aero-wait.ani` (was `aero_busy.ani`)
+  - `assets/img/wallpaper/win7-default.jpg` (was `img0.jpg`)
+- Upstream has no LICENSE file; assets are unofficial archival copies of Microsoft Windows 7 UI elements.
+
+### MCPlayer2015/all-windows-sounds
+- Source: https://github.com/MCPlayer2015/all-windows-sounds
+- Repo description: "Every Windows sound Microsoft ever made"
+- Files used (copied from `(2009) Windows 7/`):
+  - `assets/audio/win7-startup.wav` (was `Startup.wav`)
+- Upstream has no LICENSE file; assets are archival copies of Microsoft Windows sound effects.
+
 ## Other authentic Win7 icon sources (referenced, not bundled)
 
 ### visnalize/resources

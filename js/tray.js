@@ -12,8 +12,9 @@ function setAudioState(on) {
   AUDIO_BTN.setAttribute('aria-pressed', String(on));
   AUDIO_BTN.dataset.i18nAria = on ? 'tray.audio.on' : 'tray.audio.off';
   if (on) {
-    audioEl ??= new Audio('assets/audio/ambient.ogg');
-    audioEl.loop = true; audioEl.volume = 0.3;
+    audioEl ??= new Audio('assets/audio/win7-startup.wav');
+    audioEl.loop = false; audioEl.volume = 0.5;
+    audioEl.currentTime = 0;
     audioEl.play().catch(() => setAudioState(false));
   } else if (audioEl) {
     audioEl.pause();

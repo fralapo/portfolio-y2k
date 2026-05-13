@@ -1,10 +1,10 @@
 .wallpaper {
   position: fixed; inset: 0;
-  background: var(--aero-sky-grad);
-  background-image:
-    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(255,255,255,.18), transparent 60%),
-    radial-gradient(ellipse 80% 50% at 80% 70%, rgba(255,255,255,.12), transparent 60%),
-    var(--aero-sky-grad);
+  background: var(--aero-sky-grad); /* gradient fallback while image loads / if 404 */
+  background-image: url('../img/wallpaper/win7-default.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: var(--z-desktop);
 }
 
